@@ -40,7 +40,14 @@ Edit `config.php` and configure the database settings.
 
 ## Add another counter
 
-You can run multiple counters in the same database by uploading multiple scripts to different folders after editing this line `define('COUNTER_NAME', 'example');` and inserting another row in the `counters` table with the new counter name.
+You can run multiple counters in the same database by uploading multiple scripts to different folders after editing this line: `define('COUNTER_NAME', 'example');` in `config.php` and inserting another row in the `counters` table with the new counter name.
+
+You can use the following SQL to create the `example2` counter:
+
+```sql
+INSERT INTO `counters` (`counter_name`, `counter_value`) VALUES
+('example2', 0);
+```
 
 ## Insert the counters in your websites
 
