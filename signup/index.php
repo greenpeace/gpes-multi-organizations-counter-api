@@ -3,9 +3,8 @@
 require_once('../config.php');
 
 /**
- * Inscrease the Database
+ * Increase the value in the database
  */
-
 $database->update("counters", [
 	"counter_value[+]" => 1,
 ], [
